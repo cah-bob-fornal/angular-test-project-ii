@@ -1,0 +1,7 @@
+{
+  "localJSON": {
+    "BASE": "assets/mock-data/api",
+
+    "get-summary": "/summary.json"
+  }
+}
