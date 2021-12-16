@@ -1,6 +1,22 @@
 [
-  { "name": "Bob Fornal", "email": "bob.fornal@cardinalhealth.com", "position": "Frontend Developer" },
-  { "name": "Lindsay Klenzman", "email": "lindsay.klenzman@cardinalhealth.com", "position": "IT EMERGE" },
-  { "name": "Lao Richard", "email": "richardalan.lao@cardinalhealth.com", "position": "Incident Slave" },
-  { "name": "Rachel Kret", "email": "rachel.kret@cardinalhealth.com", "position": "Tentative Commander" }
+  {
+    "name": "Bob Fornal",
+    "email": "bob.fornal@cardinalhealth.com",
+    "position": "Frontend Developer"
+  },
+  {
+    "name": "Lindsay Klenzman",
+    "email": "lindsay.klenzman@cardinalhealth.com",
+    "position": "IT EMERGE"
+  },
+  {
+    "name": "Lao Richard",
+    "email": "richardalan.lao@cardinalhealth.com",
+    "position": "Incident Slave"
+  },
+  {
+    "name": "Rachel Kret",
+    "email": "rachel.kret@cardinalhealth.com",
+    "position": "Tentative Commander"
+  }
 ]

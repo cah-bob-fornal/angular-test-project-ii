@@ -1,0 +1,9 @@
+
+table.mat-table {
+  width: 100%;
+
+  .cell-can-be-hovered:hover {
+    background-color: #888;
+    cursor: pointer;
+  }
+}

@@ -12,24 +12,28 @@ export class ApiService {
 
   public useLocalJSON: boolean = true;
 
+  private _summaryData: Array<any> = [];
   public summaryData: BehaviorSubject<Array<any>> = new BehaviorSubject<Array<any>>([]);
 
   constructor(
     public http: HttpClient
   ) { }
 
-    getSummary = async (): Promise<void> => {
-      const base: string = hostnames.localJSON.BASE;
-      const file: string = hostnames.localJSON['get-summary'];
-      const url: string = `http://localhost:4200/${ base }${ file }`;
+  getSummary = async (): Promise<void> => {
+    const base: string = hostnames.localJSON.BASE;
+    const file: string = hostnames.localJSON['get-summary'];
+    const url: string = `http://localhost:4200/${ base }${ file }`;
 
-      try {
-        const data: any = await this.http.get<Array<any>>(url).toPromise();
-        this.summaryData.next(data);
-      } catch (error) {
-        console.log(error);
-        this.summaryData.next([]);
-      }
-    };
+    try {
+      const data: any = await this.http.get<Array<any>>(url).toPromise();
+      this._summaryData = data;
+      this.summaryData.next(data);
+    } catch (error) {
+      console.log(error);
+      this.summaryData.next([]);
+    }
+  };
+
+  getSummaryByIndex = (index: number): any => this._summaryData[index];
 
 }

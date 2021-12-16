@@ -1,2 +1,23 @@
 
 <div>{{ data.length }}</div>
+
+<table mat-table [dataSource]="data" class="mat-elevation-z8">
+
+  <ng-container *ngFor="let struct of structure">
+
+    <ng-container [matColumnDef]="struct.key">
+      <th mat-header-cell *matHeaderCellDef>{{ struct.title }}</th>
+      <td
+        mat-cell
+        (click)="handleCellClick(struct, element)"
+        *matCellDef="let element">
+        {{ element[struct.key] }}
+      </td>
+    </ng-container>
+  
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columns"></tr>
+  <tr mat-row class="cell-can-be-hovered" *matRowDef="let row; columns: columns;"></tr>
+</table>
+

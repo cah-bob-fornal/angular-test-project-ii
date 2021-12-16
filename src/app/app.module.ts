@@ -7,22 +7,28 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
+import { MatTableModule } from '@angular/material/table';
+
 import { HomeComponent } from '@pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SummaryComponent } from './pages/summary/summary.component';
+import { DetailComponent } from './pages/detail/detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SummaryComponent
+    SummaryComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
 
-    HttpClientModule
+    HttpClientModule,
+
+    MatTableModule
   ],
   providers: [],
   bootstrap: [
