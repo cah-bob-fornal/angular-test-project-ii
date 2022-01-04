@@ -2,11 +2,11 @@
 <div>{{ data.length }}</div>
 
 <table mat-table [dataSource]="data" class="mat-elevation-z8">
-
+  <caption>Summary of Data</caption>
   <ng-container *ngFor="let struct of structure">
 
     <ng-container [matColumnDef]="struct.key">
-      <th mat-header-cell *matHeaderCellDef>{{ struct.title }}</th>
+      <th [id]="struct.title" mat-header-cell *matHeaderCellDef>{{ struct.title }}</th>
       <td
         mat-cell
         (click)="handleCellClick(struct, element)"
