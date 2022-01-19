@@ -1,4 +1,10 @@
 
-<p>{{ data.name }}</p>
-<p>{{ data.email }}</p>
-<p>{{ data.position }}</p>
+<mat-card class="person">
+  
+  <mat-card-title>{{ data.name }}</mat-card-title>
+  <mat-card-content>
+    <p class="copyable" (click)="copyEmail()"><span>EMAIL:</span> {{ data.email }}</p>
+    <p><span>POSITION:</span> {{ data.position }}</p>
+  </mat-card-content>
+
+</mat-card>

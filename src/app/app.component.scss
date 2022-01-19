@@ -1,0 +1,17 @@
+
+.mat-drawer-container {
+  background-color: white !important;
+  color: black !important;
+
+  .mat-drawer {
+    background-color: white !important;
+    color: black !important;
+  
+    padding: 1em;
+  }
+
+  .mat-drawer-content {
+    min-height: calc(100vh - 2em);
+  }
+  
+}

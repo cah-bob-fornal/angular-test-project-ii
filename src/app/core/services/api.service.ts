@@ -34,6 +34,8 @@ export class ApiService {
     }
   };
 
-  getSummaryByIndex = (index: number): any => this._summaryData[index];
+  getSummaryByIndex = (index: number): any => {
+    return this._summaryData[index];
+  };
 
 }

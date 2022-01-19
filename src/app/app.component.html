@@ -1,2 +1,18 @@
 
-<router-outlet></router-outlet>
+<mat-drawer-container>
+  <mat-drawer mode="side" opened>
+    
+    <nav>
+      <ul>
+        <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+        <li><a routerLink="/summary" routerLinkActive="active">Summary Page</a></li>
+      </ul>
+    </nav>
+
+  </mat-drawer>
+  <mat-drawer-content>
+    
+    <router-outlet></router-outlet>
+
+  </mat-drawer-content>
+</mat-drawer-container>
